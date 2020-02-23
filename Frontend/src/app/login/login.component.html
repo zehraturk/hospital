@@ -1,0 +1,22 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="FormLogin">
+    <h2>Doktor Giriş Sayfası</h2>
+   
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" formControlName="doctorEmail" id="doctorEmail" name="email" placeholder="Email"
+            required>
+    </div>
+    <!--<div [hidden]="!email.pristine" class="alert alert-danger">Email gerekli</div>-->
+
+    <div class="form-group">
+        <label for="password">Parola</label>
+        <input type="password" class="form-control" formControlName="doctorPassword" id="doctorPassword" name="password"
+            placeholder="Parola" required>
+    </div>
+   <!-- <div [hidden]="!password.pristine" class="alert alert-danger">Parola gerekli</div>-->
+
+
+    <!--[disabled]="!register-form.valid"-->
+    <button type="submit" class="btn btn-info" >Giriş Yap</button>
+</form>

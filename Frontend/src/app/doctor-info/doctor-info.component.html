@@ -1,0 +1,26 @@
+
+<div class="card my-5">
+    <div class="card-body">
+        <h2>Bilgileriniz</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <!--<th scope="col">#</th> -->
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Email</th>
+            <th scope="col">Branş</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <td>{{ doctor.id }}</td>-->
+            <td>{{this.loginService.getloggedDoctor().doctorName }}</td>
+						<td>{{this.loginService.getloggedDoctor().doctorSurname }}</td>
+            <td>{{this.loginService.getloggedDoctor().doctorEmail}}</td>
+            <td>{{this.loginService.getloggedDoctor().doctorBranch}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,57 @@
+<div class="container">
+</div>
+<div class="jumbotron">
+	<div *ngIf="this.loginService.getIsLoggedIn() ; then loggedTrue; else loggedFalse"> ... </div>
+	<!--LOGIN OLUNMUŞSA-->
+	<ng-template #loggedTrue>
+		<div>Hoşgeldiniz, Doktor {{this.loginService.getloggedDoctor().doctorName}}
+			{{this.loginService.getloggedDoctor().doctorSurname}}</div>
+		<div class="card-body">
+			<table class="table table-bordered table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Ad</th>
+						<th scope="col">Soyad</th>
+						<th scope="col">E-posta</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{this.loginService.getloggedDoctor().doctorName }}</td>
+						<td>{{this.loginService.getloggedDoctor().doctorSurname }}</td>
+						<td>{{this.loginService.getloggedDoctor().doctorEmail}}</td>
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div></div>
+		<div class="card my-5">
+			<div class="card-body">
+			  <h3>Sistemdeki Hasta Bilgileri</h3>
+			  <table class="table table-bordered table-striped">
+				<thead class="thead-dark">
+				  <tr>
+					<th scope="col">TC</th>
+					<th scope="col">Ad</th>
+					<th scope="col">Soyad</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr *ngFor="let patient of patients">
+					<td>{{ patient.patientTcNo }}</td>
+					<td>{{ patient.patientName }}</td>
+					<td>{{ patient.patientSurname }}</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+	</ng-template>
+	<!--LOGIN OLUNMAMIŞSA-->
+	<ng-template #loggedFalse>
+		
+
+
+	</ng-template>
+</div>

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-light">
+  <a href="/home" class="navbar-brand">Doktor Hasta Sistemi</a>
+
+  <form class="form-inline" *ngIf="!this.loginService.getIsLoggedIn()">
+    <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Giriş Yap</button>
+  </form>
+  <form class="form-inline" *ngIf="!this.loginService.getIsLoggedIn()">
+    <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/register">Kaydol</button>
+  </form>
+  <form class="form-inline" *ngIf="this.loginService.getIsLoggedIn()">
+    <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/home" (click)="this.logoutService.logout()">Çıkış Yap</button>
+  </form>
+  <form class="form-inline" *ngIf="this.loginService.getIsLoggedIn()">
+    <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/doctor" >Hesabım</button>
+  </form>
+
+  <form class="form-inline" *ngIf="this.loginService.getIsLoggedIn()">
+    <button  class="btn btn-outline-success my-2 my-sm-0" routerLink="/patients" >Hastalarım</button>
+  </form>
+</nav>
+
+<router-outlet></router-outlet>

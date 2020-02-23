@@ -1,0 +1,31 @@
+
+<form [formGroup]="registerForm" (ngSubmit)="register()" class="FormRegister">
+    <h2>Doktor Kayıt Sayfası</h2>
+    <div class="form-group">
+        <label for="name">Ad</label>
+        <input type="text" class="form-control" formControlName="doctorName" id="doctorName" name="name" placeholder="Ad" required>
+    </div>
+    <div class="form-group">
+        <label for="surname">Soyad</label>
+        <input type="text" class="form-control" formControlName="doctorSurname" id="doctorSurname" name="surname"
+            placeholder="Soyad" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" formControlName="doctorEmail" id="doctorEmail" name="email" placeholder="Email"
+            required>
+    </div>
+    <div class="form-group">
+        <label for="password">Parola</label>
+        <input type="password" class="form-control" formControlName="doctorPassword" id="doctorPassword" name="password"
+            placeholder="Parola" required>
+    </div>
+
+    <div class="form-group">
+        <label for="branch">Brans</label>
+        <input type="text"  class="form-control" formControlName="doctorBranch" id="doctorBranch" name="branch"
+                placeholder="Brans" required >     
+    </div>
+
+    <button type="submit" class="btn btn-info" >Kayıt ol</button>
+</form>

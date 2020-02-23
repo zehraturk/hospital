@@ -1,0 +1,24 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <!--<th scope="col">#</th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Email</th>
+            <th scope="col">Branş</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctor of doctors">
+            <!-- <td>{{ doctor.id }}</td>-->
+            <td>{{ doctor.doctorName }}</td>
+            <td>{{ doctor.doctorSurname }}</td>
+            <td>{{ doctor.doctorEmail }}</td>
+            <td>{{ doctor.doctorBranch }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

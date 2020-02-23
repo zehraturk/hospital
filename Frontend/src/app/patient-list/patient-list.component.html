@@ -1,0 +1,26 @@
+
+
+<div class="card my-5">
+    <div class="card-body">
+      <h3>Hastalarınız</h3>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">TC</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+           
+        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+         
+            <td>{{ patient.patientTcNo }}</td>
+            <td>{{ patient.patientName }}</td>
+            <td>{{ patient.patientSurname }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
